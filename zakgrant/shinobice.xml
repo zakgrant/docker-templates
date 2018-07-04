@@ -3,7 +3,7 @@
   <Name>shinobi</Name>
   <Repository>shinobicctv/shinobi</Repository>
   <Registry>https://hub.docker.com/r/shinobicctv/shinobi/~/dockerfile/</Registry>
-  <Network>bridge</Network>
+  <Network>host</Network>
   <Privileged>false</Privileged>
   <Support>https://hub.docker.com/r/shinobicctv/shinobi/</Support>
   <Overview>Streams by WebSocket, and Save to WebM. Shinobi can record IP Cameras and Local Cameras. &amp;lt;br /&amp;gt; &amp;lt;br /&amp;gt;&#xD;

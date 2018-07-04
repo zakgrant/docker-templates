@@ -22,7 +22,7 @@ To change these credentials after logged in. &amp;lt;br /&amp;gt;&#xD;
   <Category/>
   <WebUI>http://[IP]:[PORT:8083]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/zakgrant/docker-templates/master/zakgrant/shinobice.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/zakgrant/docker-templates/master/zakgrant/images/shinobice-icon.png</Icon>  
+  <Icon>https://raw.githubusercontent.com/zakgrant/docker-templates/master/zakgrant/images/shinobice-icon.png</Icon>
   <ExtraParams/>
   <DateInstalled>1495465372</DateInstalled>
   <Description>Streams by WebSocket, and Save to WebM. Shinobi can record IP Cameras and Local Cameras. &amp;lt;br /&amp;gt; &amp;lt;br /&amp;gt;&#xD;
@@ -87,6 +87,8 @@ To change these credentials after logged in. &amp;lt;br /&amp;gt;&#xD;
   </Data>
   <Environment/>
   <Config Name="Host Path 1" Target="/opt/shinobi/videos" Default="/opt/shinobi/videos" Mode="rw" Description="Container Path: /opt/shinobi/videos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/videos/</Config>
+  <Config Name="Host Path 2" Target="/mnt/user/appdata/shinobi/config" Default="/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shinobi/config/</Config>
+
   <Config Name="WebUI port" Target="8083" Default="" Mode="tcp" Description="Container Port: 8083" Type="Port" Display="always" Required="true" Mask="false">8083</Config>
   <Config Name="Port" Target="3314" Default="" Mode="tcp" Description="Container Port: 3314" Type="Port" Display="always" Required="true" Mask="false">3314</Config>
 </Container>

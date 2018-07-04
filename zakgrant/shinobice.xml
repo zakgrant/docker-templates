@@ -65,11 +65,6 @@ To change these credentials after logged in. &amp;lt;br /&amp;gt;&#xD;
       <Mode>ro</Mode>
     </Volume>
     <Volume>
-      <HostDir>/etc/localtime</HostDir>
-      <ContainerDir>/etc/localtime</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
       <HostDir>/mnt/user/appdata/shinobi/config</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
@@ -86,8 +81,11 @@ To change these credentials after logged in. &amp;lt;br /&amp;gt;&#xD;
     </Volume>
   </Data>
   <Environment/>
-  <Config Name="Host Path 1" Target="/opt/shinobi/videos" Default="/opt/shinobi/videos" Mode="rw" Description="Container Path: /opt/shinobi/videos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/videos/</Config>
-  <Config Name="Host Path 2" Target="/mnt/user/appdata/shinobi/config" Default="/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shinobi/config/</Config>
+  <Config Name="Localtime Path" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Container Path: /etc/localtime" Type="Path" Display="always" Required="true" Mask="false">/etc/localtime</Config>
+  <Config Name="Timezone Path" Target="/etc/timezone" Default="/etc/timezone" Mode="ro" Description="Container Path: /etc/timezone" Type="Path" Display="always" Required="true" Mask="false">/etc/timezone</Config>
+  <Config Name="Config Path" Target="/mnt/user/appdata/shinobi/config" Default="/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shinobi/config/</Config>
+  <Config Name="Data Path" Target="/mnt/user/appdata/shinobi/datadir" Default="/var/lib/mysql" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shinobi/datadir/</Config>
+  <Config Name="Video Path" Target="/opt/shinobi/videos" Default="/opt/shinobi/videos" Mode="rw" Description="Container Path: /opt/shinobi/videos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/videos/</Config>
 
   <Config Name="WebUI port" Target="8083" Default="" Mode="tcp" Description="Container Port: 8083" Type="Port" Display="always" Required="true" Mask="false">8083</Config>
   <Config Name="Port" Target="3314" Default="" Mode="tcp" Description="Container Port: 3314" Type="Port" Display="always" Required="true" Mask="false">3314</Config>

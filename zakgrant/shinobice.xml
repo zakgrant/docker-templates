@@ -55,13 +55,33 @@ To change these credentials after logged in. &amp;lt;br /&amp;gt;&#xD;
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/videos/</HostDir>
-      <ContainerDir>/opt/shinobi/videos</ContainerDir>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/timezone</HostDir>
+      <ContainerDir>/etc/timezone</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/shinobi/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/shinobi</HostDir>
-      <ContainerDir>/var/log/mysql/</ContainerDir>
+      <HostDir>/mnt/user/appdata/shinobi/datadir</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/videos/</HostDir>
+      <ContainerDir>/opt/shinobi/videos</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -69,5 +89,4 @@ To change these credentials after logged in. &amp;lt;br /&amp;gt;&#xD;
   <Config Name="Host Path 1" Target="/opt/shinobi/videos" Default="/opt/shinobi/videos" Mode="rw" Description="Container Path: /opt/shinobi/videos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/videos/</Config>
   <Config Name="WebUI port" Target="8083" Default="" Mode="tcp" Description="Container Port: 8083" Type="Port" Display="always" Required="true" Mask="false">8083</Config>
   <Config Name="Port" Target="3314" Default="" Mode="tcp" Description="Container Port: 3314" Type="Port" Display="always" Required="true" Mask="false">3314</Config>
-  <Config Name="MySQL logs" Target="/var/log/mysql/" Default="/mnt/user/appdata/shinobi" Mode="rw" Description="Container Path: /var/log/mysql/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/shinobi</Config>
 </Container>

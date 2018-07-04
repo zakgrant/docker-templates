@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>shinobi</Name>
+  <Repository>shinobicctv/shinobi</Repository>
+  <Registry>https://hub.docker.com/r/shinobicctv/shinobi/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/shinobicctv/shinobi/</Support>
+  <Overview>Streams by WebSocket, and Save to WebM. Shinobi can record IP Cameras and Local Cameras. &amp;lt;br /&amp;gt; &amp;lt;br /&amp;gt;&#xD;
+&#xD;
+If you used the default databse the login credentials for the WebUI are: &amp;lt;br /&amp;gt;&#xD;
+Username : ccio@m03.ca &amp;lt;br /&amp;gt;&#xD;
+Password : password &amp;lt;br /&amp;gt; &amp;lt;br /&amp;gt;&#xD;
+&#xD;
+To change these credentials after logged in. &amp;lt;br /&amp;gt;&#xD;
+&#xD;
+1. Login &amp;lt;br /&amp;gt;&#xD;
+2. Click user email located at the top right of the dashboard. &amp;lt;br /&amp;gt;&#xD;
+3. Open Settings. &amp;lt;br /&amp;gt;&#xD;
+4. Change details to your liking. &amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&#xD;
+[b]Converted By Community Applications[/b] </Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8083]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/zakgrant/docker-templates/master/zakgrant/shinobice.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/zakgrant/docker-templates/master/zakgrant/images/shinobice-icon.png</Icon>  
+  <ExtraParams/>
+  <DateInstalled>1495465372</DateInstalled>
+  <Description>Streams by WebSocket, and Save to WebM. Shinobi can record IP Cameras and Local Cameras. &amp;lt;br /&amp;gt; &amp;lt;br /&amp;gt;&#xD;
+&#xD;
+If you used the default databse the login credentials for the WebUI are: &amp;lt;br /&amp;gt;&#xD;
+Username : ccio@m03.ca &amp;lt;br /&amp;gt;&#xD;
+Password : password &amp;lt;br /&amp;gt; &amp;lt;br /&amp;gt;&#xD;
+&#xD;
+To change these credentials after logged in. &amp;lt;br /&amp;gt;&#xD;
+&#xD;
+1. Login &amp;lt;br /&amp;gt;&#xD;
+2. Click user email located at the top right of the dashboard. &amp;lt;br /&amp;gt;&#xD;
+3. Open Settings. &amp;lt;br /&amp;gt;&#xD;
+4. Change details to your liking. &amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&#xD;
+[b]Converted By Community Applications[/b] </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8083</HostPort>
+        <ContainerPort>8083</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3314</HostPort>
+        <ContainerPort>3314</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/videos/</HostDir>
+      <ContainerDir>/opt/shinobi/videos</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/shinobi</HostDir>
+      <ContainerDir>/var/log/mysql/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="Host Path 1" Target="/opt/shinobi/videos" Default="/opt/shinobi/videos" Mode="rw" Description="Container Path: /opt/shinobi/videos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/videos/</Config>
+  <Config Name="WebUI port" Target="8083" Default="" Mode="tcp" Description="Container Port: 8083" Type="Port" Display="always" Required="true" Mask="false">8083</Config>
+  <Config Name="Port" Target="3314" Default="" Mode="tcp" Description="Container Port: 3314" Type="Port" Display="always" Required="true" Mask="false">3314</Config>
+  <Config Name="MySQL logs" Target="/var/log/mysql/" Default="/mnt/user/appdata/shinobi" Mode="rw" Description="Container Path: /var/log/mysql/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/shinobi</Config>
+</Container>
